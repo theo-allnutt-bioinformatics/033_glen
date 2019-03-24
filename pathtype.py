@@ -58,17 +58,17 @@ for f in filelist:
 	
 	print f,blast_type
 	if blast_type == "blastp":
-		p1= subprocess.Popen("blastp -query %s -db %s -out %s -outfmt '6 qseqid sseqid pident length slen qstart qend sstart send evalue bitscore stitle' -num_threads 24 -evalue 1e-10" %(f,db,out), shell=True).wait()
+		p1= subprocess.Popen("blastp -query %s -db %s -out %s -outfmt '6 qseqid sseqid pident length slen qstart qend sstart send evalue bitscore stitle' -num_threads 24" %(f,db,out), shell=True).wait()
 
 	if blast_type == "blastn":
-		p1= subprocess.Popen("blastn -task blastn -query %s -db %s -out %s -outfmt '6 qseqid sseqid pident length slen qstart qend sstart send evalue bitscore stitle' -num_threads 24 -evalue 1e-10" %(f,db,out), shell=True).wait()
+		p1= subprocess.Popen("blastn -task blastn -query %s -db %s -out %s -outfmt '6 qseqid sseqid pident length slen qstart qend sstart send evalue bitscore stitle' -num_threads 24" %(f,db,out), shell=True).wait()
 	
 	if blast_type == "mega":
-		p1= subprocess.Popen("blastn -query %s -db %s -out %s -outfmt '6 qseqid sseqid pident length slen qstart qend sstart send evalue bitscore stitle' -num_threads 24 -evalue 1e-10" %(f,db,out), shell=True).wait()
+		p1= subprocess.Popen("blastn -query %s -db %s -out %s -outfmt '6 qseqid sseqid pident length slen qstart qend sstart send evalue bitscore stitle' -num_threads 24" %(f,db,out), shell=True).wait()
 
 	
 	if blast_type == "blastx":
-		p1= subprocess.Popen("blastx -query %s -db %s -out %s -outfmt '6 qseqid sseqid pident length slen qstart qend sstart send evalue bitscore stitle' -num_threads 24 -evalue 1e-10" %(f,db,out), shell=True).wait()
+		p1= subprocess.Popen("blastx -query %s -db %s -out %s -outfmt '6 qseqid sseqid pident length slen qstart qend sstart send evalue bitscore stitle' -num_threads 24" %(f,db,out), shell=True).wait()
 	
 		
 	result = open(out,'r')
